@@ -1,0 +1,63 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.blinking-cursor {
+  display: inline-block;
+  width: 1ch;
+  /* Width of a single character */
+  animation: blink 1s step-end infinite;
+}
+
+.blinking-highlight {
+  display: inline-block;
+  background-color: transparent;
+  /* Default background is transparent */
+  color: black;
+  /* Ensure the text color remains black */
+  width: 0.5em;
+  /* Control the width of the space to make it visible */
+  margin-left: 2px;
+  /* Space out the highlight from the text */
+  border-radius: 2px;
+  /* Round the corners of the highlight */
+  animation: blink 1s step-end infinite;
+  /* Blinking animation */
+}
+
+/* Blinking effect styles */
+.blinking-highlight.active {
+  background-color: #00FF00;
+  /* Green background for the blinking effect when active */
+  transition: background-color 0.3s ease;
+  /* make text bold */
+}
+
+/* Add spacing between navbar items */
+nav {
+  gap: 1rem;
+  /* Adds spacing between navbar items */
+}
+
+nav a {
+  margin-left: 1rem;
+  /* Adds space before each link */
+  margin-right: 1rem;
+  /* Adds space after each link */
+}
+
+/* Blinking effect styles */
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 0.5;
+    /* Dimmed at the start and end */
+  }
+
+  50% {
+    opacity: 1;
+    /* Fully visible in the middle of the animation */
+  }
+}
