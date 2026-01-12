@@ -5,7 +5,7 @@ import tailwindcss from 'tailwindcss';
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: "/trishaqk.github.io/",
+  base: "/",
   css: {
     postcss: {
       plugins: [
